@@ -101,15 +101,15 @@ function spreadData(){
 		}>
 			</td>
 			<td class="border border-slate-300">
-				<input type="text" required class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+				<input type="number" required class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
 					id="${cabinets[i].cabinetName}-Height" value=${cabinets[i].cabinetHeight}>
 			</td>
 			<td class="border border-slate-300">
-				<input type="text" required	class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+				<input type="number" required	class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
 					id="${cabinets[i].cabinetName}-Depth" value=${cabinets[i].cabinetDepth} >
 			</td>
 			<td class="border border-slate-300">
-				<input type="text" class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+				<input type="number" class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
 					id="${cabinets[i].cabinetName}" value="" required>
             </td>
         </tr>
