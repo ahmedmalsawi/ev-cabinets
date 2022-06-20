@@ -40,3 +40,10 @@
     opacity: 1;
     display:block;
 }
+
+.wallQn::before{
+content:"Wall: ";
+}
+#wallQn ::placeholder{
+color:red !important;
+}
