@@ -26,25 +26,27 @@
             
                 <div class="contract bg-slate-200 mx-auto m-4 rounded-xl items-center ">
                     <h3 class="text-2xl text-center text-cyan-800">Inputs</h3>
-                    <div class="inputs bg-slate-200 grow flex flex-wrap justify-between mx-auto col-md-2 px-auto p-2 mr-16  ml-16 rounded-xl items-center ">
-                        <input  class="w-full text-center bg-slate-300 p-2 rounded-xl hover:bg-slate-50 focus:bg-slate-50" type="text" id="contractNo" placeholder="contract Number" >
-                    </div>
-                    <!-- class="text-red-600 placeholder-orange-900 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full" -->
-                    <div class="inputs bg-slate-200 grow flex flex-wrap justify-between mx-auto col-md-2 mb-4 p-4 rounded-xl items-center ">
-                        <label class="p-2" for="wallQn">Wall</label>
-                        <input type="number" id="wallQn" placeholder="Wall cabinets quantity"
+                    <!-- <form action="" target="_self"> -->
+                        <div class="inputs bg-slate-200 grow flex flex-wrap justify-between mx-auto col-md-2 px-auto p-2 mr-16  ml-16 rounded-xl items-center ">
+                            <input required class="w-full text-center bg-slate-300 p-2 rounded-xl hover:bg-slate-50 focus:bg-slate-50" type="text" id="contractNo" placeholder="contract Number" >
+                        </div>
+                        <!-- class="text-red-600 placeholder-orange-900 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full" -->
+                        <div class="inputs bg-slate-200 grow flex flex-wrap justify-between mx-auto col-md-2 mb-4 p-4 rounded-xl items-center ">
+                            <label class="p-2" for="wallQn">Wall</label>
+                            <input required type="number" id="wallQn" placeholder="Wall cabinets quantity"
                             class="text-cyan-800 placeholder-slate-400 grow text-center p-2 bg-slate-300 rounded-xl hover:bg-slate-50 focus:bg-slate-50">
-                        <label class="p-2" for="wallQn">Tall</label>
-                        <input type="number" id="tallQn" placeholder="Tall cabinets quantity"
+                            <label class="p-2" for="wallQn">Tall</label>
+                            <input required type="number" id="tallQn" placeholder="Tall cabinets quantity"
                             class="text-cyan-800 placeholder-slate-400 grow text-center p-2 bg-slate-300 rounded-xl hover:bg-slate-50 focus:bg-slate-50">
-                        <label class="p-2" for="wallQn">Base</label>
-                        <input type="number" id="baseQn" placeholder="Base cabinets quantity"
+                            <label class="p-2" for="wallQn">Base</label>
+                            <input required type="number" id="baseQn" placeholder="Base cabinets quantity"
                             class="text-cyan-800 placeholder-slate-400 grow text-center p-2 bg-slate-300 rounded-xl hover:bg-slate-50 focus:bg-slate-50">
-                    </div>
-                    <button id="submit" class="mx-auto text-xl text-red-600 center w-full text-center p-2 bg-slate-200 rounded-2xl block hover:-translate-y-1 transition-all ease-in-out delay-110 duration-300 hover:-scale-80 hover:bg-slate-300">Submit</button>
+                        </div>
+                        <button name="input" id="submit" class="mx-auto text-xl text-red-600 center w-full text-center p-2 bg-slate-200 rounded-2xl block hover:-translate-y-1 transition-all ease-in-out delay-110 duration-300 hover:-scale-80 hover:bg-slate-300">Submit</button>
+                    <!-- </form> -->
                 </div>
-            
-        </div>
+                
+            </div>
             <!-- End Inputs -->
             
             
@@ -53,9 +55,10 @@
             <!-- Start Update -->
             <div class="update  bg-slate-200 mx-auto max-w-3xl px-4 m-8 rounded-3xl items-center shadow-2xl">
                 <h3 class="text-2xl text-center text-cyan-800">Update Data</h3>
-                    <!-- <div class="table bg-slate-200"> -->
-                        <table  class="table-update table-auto hover:bg-gray-100 m-4 items-center ontainer mx-auto md:container md:mx-auto px-4 ">
-                            <tr class="text-center uppercase bg-gray-300 ">
+                <!-- <div class="table bg-slate-200"> -->
+                        <!-- <form action="" target="_self" name="update" method="post"> -->
+                            <table  class="table-update table-auto hover:bg-gray-100 m-4 items-center ontainer mx-auto md:container md:mx-auto px-4 ">
+                                <tr class="text-center uppercase bg-gray-300 ">
                                 <th class="border border-slate-300 p-2">ID</th>
                                 <th class="border border-slate-300 p-2">Name</th>
                                 <th class="border border-slate-300 p-2">Height</th>
@@ -63,41 +66,14 @@
                                 <th class="border border-slate-300 p-2">Width</th>
                             </tr>
                             <tbody id="updateTable">
-                                <!-- <tr class="text-center">
-                                    <td class="border border-slate-300">1</td>
-                                    <td class="border border-slate-300">B-1</td>
-                                    <td class="border border-slate-300">45</td>
-                                    <td class="border border-slate-300">60</td>
-                                    <td class="border border-slate-300">35</td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="border border-slate-300">1</td>
-                                    <td class="border border-slate-300">B-1</td>
-                                    <td class="border border-slate-300">45</td>
-                                    <td class="border border-slate-300">60</td>
-                                    <td class="border border-slate-300">35</td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="border border-slate-300">1</td>
-                                    <td class="border border-slate-300">B-1</td>
-                                    <td class="border border-slate-300">45</td>
-                                    <td class="border border-slate-300">60</td>
-                                    <td class="border border-slate-300">35</td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="border border-slate-300">1</td>
-                                    <td class="border border-slate-300">B-1</td>
-                                    <td class="border border-slate-300">45</td>
-                                    <td class="border border-slate-300">60</td>
-                                    <td class="border border-slate-300">35</td>
-                                </tr> -->
                             </tbody>
                         </table>
                         
                         <div class="button ">
-                            <button id="update"
+                            <button id="update" name="update" form="update"
                             class="mx-auto text-xl text-red-600 center w-full text-center p-2 mb-4 bg-slate-200 block hover:-translate-y-1 transition-all ease-in-out delay-110 duration-300 hover:-scale-120 rounded-2xl hover:bg-slate-300">Update</button>
                         </div>
+                    <!-- </form> -->
                     </div>
             <!-- End Outputs -->
             <!-- Start Outputs -->
@@ -107,7 +83,7 @@
             
             <div class="outputs  bg-slate-200 mx-auto max-w-3xl px-4  rounded-3xl items-center shadow-2xl">
                 <h3 class="text-2xl text-center text-cyan-800">Cladding</h3>
-                    <!-- <div class="table bg-slate-200"> -->
+                <!-- <div class="table bg-slate-200"> -->
                         <table id="table-cladding" class="table-cladding table-auto hover:bg-gray-100 m-4 items-center ontainer mx-auto md:container md:mx-auto px-4 ">
                             <tr class="table-header-grpup text-center uppercase bg-gray-300 ">
                                 <th class="border border-slate-300 p-2">ID</th>
