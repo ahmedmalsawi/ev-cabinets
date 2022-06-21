@@ -448,12 +448,14 @@ function spreadData(){
 update.onclick = function (){ 
 	updateCell();
 	spreadCladding();
+	spreadCladdingTB();
+	spreadCladdingB();
+	spreadCladdingSh();
 }
 
 
 
 function updateCell(){
-	let updateTable='';
 	let cabinets = contracts[0].cabinets;
 	for (let i = 0; i < Object.keys(contracts[0]["cabinets"]).length; i++) {
 		let updatedCellHeight   =document.getElementById(cabinets[i].cabinetName+'_Height').value;
@@ -486,4 +488,61 @@ function spreadCladding() {
 		`;
 	}
 	document.getElementById("claddingSide").innerHTML = updateTable;
+}
+function spreadCladdingTB() {
+	let updateTable = "";
+	let cabinets = contracts[0].cabinets;
+	for (let i = 0; i < Object.keys(contracts[0]["cabinets"]).length; i++) {
+		updateTable += `
+		<tr class="text-center">
+            <td style="display: none" class="border border-slate-300"   >${i + 1}</td>
+            <td style="display: none" class="border border-slate-300"   >${cabinets[i].cabinetName}</td>
+			<td class="border border-slate-300"                         >${cabinets[i].claddingTaBHeight()}</td>
+			<td class="border border-slate-300"                         >${cabinets[i].claddingTaBWidth()}</td>
+			<td class="border border-slate-300"                         >${cabinets[i].claddingTaBQn()}</td>
+			<th class="border border-slate-300"                         >K</th>
+            <th class="border border-slate-300"                         ></th>
+			<td class="border border-slate-300"                         >${cabinets[i].cabinetName}_Side_${contracts[0].contractNo}</td>
+        </tr>
+		`;
+	}
+	document.getElementById("table-cladding-tb").innerHTML = updateTable;
+}
+function spreadCladdingB() {
+	let updateTable = "";
+	let cabinets = contracts[0].cabinets;
+	for (let i = 0; i < Object.keys(contracts[0]["cabinets"]).length; i++) {
+		updateTable += `
+		<tr class="text-center">
+            <td style="display: none" class="border border-slate-300"   >${i + 1}</td>
+            <td style="display: none" class="border border-slate-300"   >${cabinets[i].cabinetName}</td>
+			<td class="border border-slate-300"                         >${cabinets[i].claddingBackHeight()}</td>
+			<td class="border border-slate-300"                         >${cabinets[i].claddingBackWidth()}</td>
+			<td class="border border-slate-300"                         >${cabinets[i].claddingBackQn}</td>
+			<th class="border border-slate-300"                         >K</th>
+            <th class="border border-slate-300"                         ></th>
+			<td class="border border-slate-300"                         >${cabinets[i].cabinetName}_Side_${contracts[0].contractNo}</td>
+        </tr>
+		`;
+	}
+	document.getElementById("table-cladding-b").innerHTML = updateTable;
+}
+function spreadCladdingSh() {
+	let updateTable = "";
+	let cabinets = contracts[0].cabinets;
+	for (let i = 0; i < Object.keys(contracts[0]["cabinets"]).length; i++) {
+		updateTable += `
+		<tr class="text-center">
+            <td style="display: none" class="border border-slate-300"   >${i + 1}</td>
+            <td style="display: none" class="border border-slate-300"   >${cabinets[i].cabinetName}</td>
+			<td class="border border-slate-300"                         >${cabinets[i].claddingShelfHeight()}</td>
+			<td class="border border-slate-300"                         >${cabinets[i].claddingShelfWidth()}</td>
+			<td class="border border-slate-300"                         >${cabinets[i].claddingShelfQn}</td>
+			<th class="border border-slate-300"                         >K</th>
+            <th class="border border-slate-300"                         ></th>
+			<td class="border border-slate-300"                         >${cabinets[i].cabinetName}_Side_${contracts[0].contractNo}</td>
+        </tr>
+		`;
+	}
+	document.getElementById("table-cladding-sh").innerHTML = updateTable;
 }
