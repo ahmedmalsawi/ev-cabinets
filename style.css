@@ -41,8 +41,8 @@
     display:block;
 }
 
-.wallQn::before{
-content:"Wall: ";
+.wallQn:before {
+content:"Wall:->";
 }
 #wallQn ::placeholder{
 color:red !important;
