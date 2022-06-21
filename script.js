@@ -178,6 +178,8 @@ for (let i = 0; i < baseCabs; i++) {
 
 
 submit.onclick = function () {
+
+
 	//adding contracts
 	// contractNo = contractNo.value;
 	
@@ -357,7 +359,10 @@ submit.onclick = function () {
 	
 	
 	// clearData();
-	spreadData();
+		autoHide("inputs-mian", "none");
+		autoHide("update-mian", "");
+		autoHide("outputs-mian", "none");
+		spreadData();
 	// console.log(newContract);
 	// console.log(contracts);
 };
@@ -447,6 +452,9 @@ function spreadData(){
 // get update values
 update.onclick = function (){ 
 	updateCell();
+	autoHide("inputs-mian", "none");
+	autoHide("update-mian", "none");
+	autoHide("outputs-mian", "");
 	spreadCladding();
 	spreadCladdingTB();
 	spreadCladdingB();
@@ -546,3 +554,19 @@ function spreadCladdingSh() {
 	}
 	document.getElementById("table-cladding-sh").innerHTML = updateTable;
 }
+function autoHide(className,effect){
+	let fileds = document.getElementsByClassName(className);
+	for (let i = 0; i < fileds.length; i++) {
+		fileds[i].style.display = effect;
+	}
+
+}
+
+// autoHide("outputs-mian", "none");
+// autoHide("inputs-mian", "none");
+// autoHide("update-mian", "none");
+
+// autoHide("outputs-mian", "");
+// autoHide("inputs-mian", "");
+// autoHide("update-mian", "");
+
