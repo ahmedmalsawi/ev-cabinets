@@ -546,7 +546,7 @@ function spreadCladdingSh() {
 			<td class="border border-slate-300"                         >${cabinets[i].claddingShelfHeight()}</td>
 			<td class="border border-slate-300"                         >${cabinets[i].claddingShelfWidth()}</td>
 			<td class="border border-slate-300"                         >${cabinets[i].claddingShelfQn}</td>
-			<th class="border border-slate-300"                         >K</th>
+			<th class="border border-slate-300"                         >R</th>
             <th class="border border-slate-300"                         ></th>
 			<td class="border border-slate-300"                         >${cabinets[i].cabinetName}_Side_${contracts[0].contractNo}</td>
         </tr>
