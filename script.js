@@ -460,7 +460,7 @@ function updateCell(){
 		let updatedCellWidth    =document.getElementById(cabinets[i].cabinetName+'_Width').value;
 		let updatedCellDepth    =document.getElementById(cabinets[i].cabinetName+'_Depth').value;
 		cabinets[i].cabinetDepth=updatedCellHeight;
-		cabinets[i].cabinetHeigh=updatedCellDepth ;
+		cabinets[i].cabinetHeight=updatedCellDepth ;
 		cabinets[i].cabinetWidth=updatedCellWidth ;
 	}
 	localStorage.setItem("contracts", JSON.stringify(contracts));
@@ -477,7 +477,7 @@ function spreadCladding() {
             <td style="display: none" class="border border-slate-300"   >${i + 1}</td>
             <td style="display: none" class="border border-slate-300"   >${cabinets[i].cabinetName}</td>
 			<td class="border border-slate-300"                         >${cabinets[i].claddingSideHeight()}</td>
-			<td class="border border-slate-300"                         >${parseInt(cabinets[i].claddingSideWidth())}</td>
+			<td class="border border-slate-300"                         >${cabinets[i].claddingSideWidth()}</td>
 			<td class="border border-slate-300"                         >${cabinets[i].claddingSideQn}</td>
 			<th class="border border-slate-300"                         >K</th>
             <th class="border border-slate-300"                         ></th>
