@@ -362,8 +362,9 @@ submit.onclick = function () {
 		autoHide("inputs-mian", "none");
 		autoHide("update-mian", "");
 		autoHide("outputs-mian", "none");
+		autoHide("new-data", "none");
 		spreadData();
-	// console.log(newContract);
+		// console.log(newContract);
 	// console.log(contracts);
 };
 // clear after input
@@ -459,8 +460,18 @@ update.onclick = function (){
 	spreadCladdingTB();
 	spreadCladdingB();
 	spreadCladdingSh();
+	autoHide("new-data", "");
 }
 
+// let newData= getElementById("new-data");
+
+newData.onclick = function () {
+	autoHide("inputs-mian", "");
+	autoHide("update-mian", "none");
+	autoHide("outputs-mian", "none");
+	autoHide("new-data", "none");
+	clearData();
+};
 
 
 function updateCell(){
