@@ -1,0 +1,2016 @@
+
+<html>
+    <script type="text/javascript" src="chrome-extension://cboahoaenonpfilfhjafdmkgeogmoplj/webpack_common.js"></script>
+    <script type="text/javascript"
+        src="chrome-extension://cboahoaenonpfilfhjafdmkgeogmoplj/webpack_content.js"></script>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png" type="image/x-icon">
+        <link rel="apple-touch-icon" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <link rel="stylesheet" href="style.css">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <title>فنون حواء || حساب الكبائن</title>
+        
+    </head>
+
+    <body data-new-gr-c-s-check-loaded="14.1064.0" data-gr-ext-installed="">
+
+        <!-- Start head -->
+        <div class="head bg-slate-300 d-flex mx-auto max-w-3xl col-md-4 m-4 rounded-xl items-center shadow-lg">
+            <h3 class="mb-3 text-3xl text-center text-red-600 uppercase">Eve's Arts</h3>
+            <p class="text-lg text-center text-cyan-800"> Cabinets Calculater</p>
+        </div>
+        <!-- End head -->
+        <div class="outputs  bg-zinc-600 mx-auto max-w-3xl px-4 rounded-3xl items-center ">
+            <h3 class="inputs-mian text-2xl p-4 mb-4 text-center text-zinc-50" >Inputs</h3>
+        </div>
+        <div class=" inputs-mian crud bg-slate-200 d-flex mx-auto max-w-3xl col-md-4 m-4 rounded-xl items-center shadow-lg"
+            >
+
+            <!-- Start Inputs -->
+
+            <div class="inputs-mian contract bg-slate-200 mx-auto m-4 rounded-xl items-center " >
+                <!-- <h3 class="text-2xl text-center text-cyan-800">Inputs</h3> -->
+                <!-- <form action="" target="_self"> -->
+                <div class="inputs-mian inputs bg-slate-200 grow flex flex-wrap justify-between mx-auto col-md-2 px-auto p-2 mr-16  ml-16 rounded-xl items-center "
+                    >
+                    <input required=""
+                        class="input w-full text-center bg-slate-300 p-2 rounded-xl hover:bg-slate-50 focus:bg-slate-50"
+                        type="text" id="contractNo" placeholder="contract Number">
+                </div>
+                <!-- class="text-red-600 placeholder-orange-900 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full" -->
+                <div class="inputs-mian inputs bg-slate-200 grow flex flex-wrap justify-between mx-auto col-md-2 mb-4 p-4 rounded-xl items-center "
+                    >
+                    <label class="p-2" for="wallQn">Wall</label>
+
+                    <input required="" type="number" id="wallQn" placeholder="Wall cabinets quantity"
+                        class="wallQn placeholder-center text-cyan-800 placeholder-slate-400 grow text-center p-2 bg-slate-300 rounded-xl hover:bg-slate-50 focus:bg-slate-50">
+
+                    <label class="p-2" for="tallQn">Tall</label>
+                    <input required="" type="number" id="tallQn" placeholder="Tall cabinets quantity"
+                        class="text-cyan-800 placeholder-slate-400 grow text-center p-2 bg-slate-300 rounded-xl hover:bg-slate-50 focus:bg-slate-50">
+                    <label class="p-2" for="baseQn">Base</label>
+                    <input required="" type="number" id="baseQn" placeholder="Base cabinets quantity"
+                        class="form-control">
+                </div>
+                <button name="input" id="submit"
+                    class="btn btn-success">Submit</button>
+                <!-- </form> -->
+            </div>
+
+        </div>
+        <!-- End Inputs -->
+
+
+
+
+        <!-- Start Update -->
+        <div 
+            class="update-mian update  bg-slate-200 mx-auto max-w-3xl px-4 m-8 rounded-3xl items-center shadow-xl">
+            <h3 class="text-2xl text-center text-cyan-800">Update Data</h3>
+            <!-- <div class="table bg-slate-200"> -->
+            <!-- <form action="" target="_self" name="update" method="post"> -->
+            <table
+                class="table-dark table-update table-auto hover:bg-gray-100 m-4 items-center ontainer mx-auto md:container md:mx-auto px-4 ">
+                <tbody>
+                    <tr class="table-dark text-center uppercase bg-gray-300 ">
+                        <th class="border border-slate-300 p-2">ID</th>
+                        <th class="border border-slate-300 p-2">Name</th>
+                        <th class="border border-slate-300 p-2">Height</th>
+                        <th class="border border-slate-300 p-2">Depth</th>
+                        <th class="border border-slate-300 p-2">Width</th>
+                    </tr>
+                </tbody>
+                <tbody id="updateTable">
+                    <tr class="text-center">
+                        <td class="border border-slate-300">1</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="W_1_Name" value="W_1"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_1_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_1_Depth" value="350"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_1_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">2</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="W_2_Name" value="W_2"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_2_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_2_Depth" value="350"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_2_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">3</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="W_3_Name" value="W_3"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_3_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_3_Depth" value="350"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_3_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">4</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="W_4_Name" value="W_4"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_4_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_4_Depth" value="350"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_4_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">5</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="W_5_Name" value="W_5"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_5_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_5_Depth" value="350"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_5_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">6</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="W_6_Name" value="W_6"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_6_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_6_Depth" value="350"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_6_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">7</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="W_7_Name" value="W_7"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_7_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_7_Depth" value="350"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_7_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">8</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="W_8_Name" value="W_8"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_8_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_8_Depth" value="350"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_8_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">9</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="W_9_Name" value="W_9"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_9_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_9_Depth" value="350"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_9_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">10</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="W_10_Name" value="W_10"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_10_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_10_Depth" value="350"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="W_10_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">11</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="T_1_Name" value="T_1"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_1_Height" value="2130"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_1_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_1_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">12</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="T_2_Name" value="T_2"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_2_Height" value="2130"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_2_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_2_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">13</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="T_3_Name" value="T_3"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_3_Height" value="2130"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_3_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_3_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">14</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="T_4_Name" value="T_4"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_4_Height" value="2130"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_4_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_4_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">15</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="T_5_Name" value="T_5"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_5_Height" value="2130"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_5_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_5_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">16</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="T_6_Name" value="T_6"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_6_Height" value="2130"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_6_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_6_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">17</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="T_7_Name" value="T_7"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_7_Height" value="2130"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_7_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_7_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">18</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="T_8_Name" value="T_8"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_8_Height" value="2130"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_8_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_8_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">19</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="T_9_Name" value="T_9"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_9_Height" value="2130"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_9_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_9_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">20</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="T_10_Name" value="T_10"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_10_Height" value="2130"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_10_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="T_10_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">21</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="B_1_Name" value="B_1"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_1_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_1_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_1_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">22</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="B_2_Name" value="B_2"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_2_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_2_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_2_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">23</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="B_3_Name" value="B_3"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_3_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_3_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_3_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">24</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="B_4_Name" value="B_4"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_4_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_4_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_4_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">25</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="B_5_Name" value="B_5"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_5_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_5_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_5_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">26</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="B_6_Name" value="B_6"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_6_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_6_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_6_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">27</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="B_7_Name" value="B_7"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_7_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_7_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_7_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">28</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="B_8_Name" value="B_8"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_8_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_8_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_8_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">29</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="B_9_Name" value="B_9"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_9_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_9_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_9_Width" value="0" required=""></td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td class="border border-slate-300">30</td>
+                        <td class="border border-slate-300"><input type="text" disabled=""
+                                class="text-cyan-800  text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full "
+                                id="B_10_Name" value="B_10"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_10_Height" value="760"></td>
+                        <td class="border border-slate-300"><input type="number" required=""
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_10_Depth" value="580"></td>
+                        <td class="border border-slate-300"><input type="number"
+                                class="text-cyan-800 text-center flex-grow p-2 bg-transparent mr-4 max-w-92 w-full hover:bg-slate-50 focus:bg-slate-50"
+                                id="B_10_Width" value="0" required=""></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="button ">
+                <button id="update" name="update" form="update"
+                    class="mx-auto text-xl text-red-600 center w-full text-center p-2 mb-4 bg-slate-200 block hover:-translate-y-1 transition-all ease-in-out delay-110 duration-300 hover:-scale-120 rounded-2xl hover:bg-slate-300">Update</button>
+            </div>
+            <!-- </form> -->
+        </div>
+        <!-- End Outputs -->
+        <!-- Start Outputs -->
+        <div style="" class="outputs-mian  bg-zinc-600 mx-auto max-w-3xl px-4 rounded-3xl items-center ">
+            <h3 class="text-2xl p-4 mb-4 text-center text-zinc-50">Outputs</h3>
+        </div>
+
+        <div style=""
+            class="outputs-mian outputs  bg-slate-200 mx-auto max-w-3xl px-4  rounded-3xl items-center shadow-xl pb-5">
+            <h3 class="text-2xl text-center text-cyan-800">Cladding - Sides</h3>
+            <!-- <div class="table bg-slate-200"> -->
+            <table
+                class="outputs-mian table-cladding table-auto hover:bg-gray-100 m-4 items-center ontainer mx-auto md:container md:mx-auto px-4  "
+                style="">
+                <tbody>
+                    <tr class="table-header-grpup text-center uppercase bg-gray-300 ">
+                        <th style="display: none" class="border border-slate-300 p-2">ID</th>
+                        <th style="display: none" class="border border-slate-300 p-2">Name</th>
+                        <th class="border border-slate-300 p-2">Height</th>
+                        <th class="border border-slate-300 p-2">Width</th>
+                        <th class="border border-slate-300 p-2">QNT</th>
+                        <th class="border border-slate-300 p-2">Type</th>
+                        <th class="border border-slate-300 p-2">F</th>
+                        <th class="border border-slate-300 p-2">Label</th>
+                    </tr>
+                </tbody>
+                <tbody id="claddingSide">
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">1</td>
+                        <td style="display: none" class="border border-slate-300">W_1</td>
+                        <td class="border border-slate-300">306</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">2</td>
+                        <td style="display: none" class="border border-slate-300">W_2</td>
+                        <td class="border border-slate-300">306</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">3</td>
+                        <td style="display: none" class="border border-slate-300">W_3</td>
+                        <td class="border border-slate-300">306</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">4</td>
+                        <td style="display: none" class="border border-slate-300">W_4</td>
+                        <td class="border border-slate-300">306</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">5</td>
+                        <td style="display: none" class="border border-slate-300">W_5</td>
+                        <td class="border border-slate-300">306</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">6</td>
+                        <td style="display: none" class="border border-slate-300">W_6</td>
+                        <td class="border border-slate-300">306</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">7</td>
+                        <td style="display: none" class="border border-slate-300">W_7</td>
+                        <td class="border border-slate-300">306</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">8</td>
+                        <td style="display: none" class="border border-slate-300">W_8</td>
+                        <td class="border border-slate-300">306</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">9</td>
+                        <td style="display: none" class="border border-slate-300">W_9</td>
+                        <td class="border border-slate-300">306</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">10</td>
+                        <td style="display: none" class="border border-slate-300">W_10</td>
+                        <td class="border border-slate-300">306</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_10_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">11</td>
+                        <td style="display: none" class="border border-slate-300">T_1</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">12</td>
+                        <td style="display: none" class="border border-slate-300">T_2</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">13</td>
+                        <td style="display: none" class="border border-slate-300">T_3</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">14</td>
+                        <td style="display: none" class="border border-slate-300">T_4</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">15</td>
+                        <td style="display: none" class="border border-slate-300">T_5</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">16</td>
+                        <td style="display: none" class="border border-slate-300">T_6</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">17</td>
+                        <td style="display: none" class="border border-slate-300">T_7</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">18</td>
+                        <td style="display: none" class="border border-slate-300">T_8</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">19</td>
+                        <td style="display: none" class="border border-slate-300">T_9</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">20</td>
+                        <td style="display: none" class="border border-slate-300">T_10</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_10_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">21</td>
+                        <td style="display: none" class="border border-slate-300">B_1</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">22</td>
+                        <td style="display: none" class="border border-slate-300">B_2</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">23</td>
+                        <td style="display: none" class="border border-slate-300">B_3</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">24</td>
+                        <td style="display: none" class="border border-slate-300">B_4</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">25</td>
+                        <td style="display: none" class="border border-slate-300">B_5</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">26</td>
+                        <td style="display: none" class="border border-slate-300">B_6</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">27</td>
+                        <td style="display: none" class="border border-slate-300">B_7</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">28</td>
+                        <td style="display: none" class="border border-slate-300">B_8</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">29</td>
+                        <td style="display: none" class="border border-slate-300">B_9</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">30</td>
+                        <td style="display: none" class="border border-slate-300">B_10</td>
+                        <td class="border border-slate-300">536</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_10_Side_1212121</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style=""
+            class="outputs-mian outputs  bg-slate-200 mx-auto max-w-3xl px-4  rounded-3xl items-center shadow-xl p-5 m-4">
+            <h3 class="text-2xl text-center text-cyan-800">Cladding - Top &amp; Bottom</h3>
+            <!-- <div class="table bg-slate-200"> -->
+            <table
+                class="table-cladding-tb table-auto hover:bg-gray-100 m-4 items-center ontainer mx-auto md:container md:mx-auto px-4  ">
+                <tbody>
+                    <tr class="table-header-grpup text-center uppercase bg-gray-300 ">
+                        <th style="display: none" class="border border-slate-300 p-2">ID</th>
+                        <th style="display: none" class="border border-slate-300 p-2">Name</th>
+                        <th class="border border-slate-300 p-2">Height</th>
+                        <th class="border border-slate-300 p-2">Width</th>
+                        <th class="border border-slate-300 p-2">QNT</th>
+                        <th class="border border-slate-300 p-2">Type</th>
+                        <th class="border border-slate-300 p-2">F</th>
+                        <th class="border border-slate-300 p-2">Label</th>
+                    </tr>
+                </tbody>
+                <tbody id="table-cladding-tb">
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">1</td>
+                        <td style="display: none" class="border border-slate-300">W_1</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">66</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">2</td>
+                        <td style="display: none" class="border border-slate-300">W_2</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">76</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">3</td>
+                        <td style="display: none" class="border border-slate-300">W_3</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">176</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">4</td>
+                        <td style="display: none" class="border border-slate-300">W_4</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">286</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">5</td>
+                        <td style="display: none" class="border border-slate-300">W_5</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">286</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">6</td>
+                        <td style="display: none" class="border border-slate-300">W_6</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">396</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">7</td>
+                        <td style="display: none" class="border border-slate-300">W_7</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">726</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">8</td>
+                        <td style="display: none" class="border border-slate-300">W_8</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">836</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">9</td>
+                        <td style="display: none" class="border border-slate-300">W_9</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">726</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">10</td>
+                        <td style="display: none" class="border border-slate-300">W_10</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">836</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_10_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">11</td>
+                        <td style="display: none" class="border border-slate-300">T_1</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">946</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">12</td>
+                        <td style="display: none" class="border border-slate-300">T_2</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">836</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">13</td>
+                        <td style="display: none" class="border border-slate-300">T_3</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">476</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">14</td>
+                        <td style="display: none" class="border border-slate-300">T_4</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">406</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">15</td>
+                        <td style="display: none" class="border border-slate-300">T_5</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">276</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">16</td>
+                        <td style="display: none" class="border border-slate-300">T_6</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">406</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">17</td>
+                        <td style="display: none" class="border border-slate-300">T_7</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">526</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">18</td>
+                        <td style="display: none" class="border border-slate-300">T_8</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">836</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">19</td>
+                        <td style="display: none" class="border border-slate-300">T_9</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">506</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">20</td>
+                        <td style="display: none" class="border border-slate-300">T_10</td>
+                        <td class="border border-slate-300">2094</td>
+                        <td class="border border-slate-300">616</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_10_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">21</td>
+                        <td style="display: none" class="border border-slate-300">B_1</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">556</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">22</td>
+                        <td style="display: none" class="border border-slate-300">B_2</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">556</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">23</td>
+                        <td style="display: none" class="border border-slate-300">B_3</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">556</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">24</td>
+                        <td style="display: none" class="border border-slate-300">B_4</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">556</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">25</td>
+                        <td style="display: none" class="border border-slate-300">B_5</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">756</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">26</td>
+                        <td style="display: none" class="border border-slate-300">B_6</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">756</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">27</td>
+                        <td style="display: none" class="border border-slate-300">B_7</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">656</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">28</td>
+                        <td style="display: none" class="border border-slate-300">B_8</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">756</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">29</td>
+                        <td style="display: none" class="border border-slate-300">B_9</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">856</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">30</td>
+                        <td style="display: none" class="border border-slate-300">B_10</td>
+                        <td class="border border-slate-300">724</td>
+                        <td class="border border-slate-300">946</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_10_Side_1212121</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div style=""
+            class="outputs-mian outputs  bg-slate-200 mx-auto max-w-3xl px-4  rounded-3xl items-center shadow-xl p-5 m-4">
+            <h3 class="text-2xl text-center text-cyan-800">Cladding - Back</h3>
+            <!-- <div class="table bg-slate-200"> -->
+            <table
+                class="table-cladding-b table-auto hover:bg-gray-100 m-4 items-center ontainer mx-auto md:container md:mx-auto px-4  ">
+                <tbody>
+                    <tr class="table-header-grpup text-center uppercase bg-gray-300 ">
+                        <th style="display: none" class="border border-slate-300 p-2">ID</th>
+                        <th style="display: none" class="border border-slate-300 p-2">Name</th>
+                        <th class="border border-slate-300 p-2">Height</th>
+                        <th class="border border-slate-300 p-2">Width</th>
+                        <th class="border border-slate-300 p-2">QNT</th>
+                        <th class="border border-slate-300 p-2">Type</th>
+                        <th class="border border-slate-300 p-2">F</th>
+                        <th class="border border-slate-300 p-2">Label</th>
+                    </tr>
+                </tbody>
+                <tbody id="table-cladding-b">
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">1</td>
+                        <td style="display: none" class="border border-slate-300">W_1</td>
+                        <td class="border border-slate-300">324</td>
+                        <td class="border border-slate-300">84</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">2</td>
+                        <td style="display: none" class="border border-slate-300">W_2</td>
+                        <td class="border border-slate-300">324</td>
+                        <td class="border border-slate-300">94</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">3</td>
+                        <td style="display: none" class="border border-slate-300">W_3</td>
+                        <td class="border border-slate-300">324</td>
+                        <td class="border border-slate-300">194</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">4</td>
+                        <td style="display: none" class="border border-slate-300">W_4</td>
+                        <td class="border border-slate-300">324</td>
+                        <td class="border border-slate-300">304</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">5</td>
+                        <td style="display: none" class="border border-slate-300">W_5</td>
+                        <td class="border border-slate-300">324</td>
+                        <td class="border border-slate-300">304</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">6</td>
+                        <td style="display: none" class="border border-slate-300">W_6</td>
+                        <td class="border border-slate-300">324</td>
+                        <td class="border border-slate-300">414</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">7</td>
+                        <td style="display: none" class="border border-slate-300">W_7</td>
+                        <td class="border border-slate-300">324</td>
+                        <td class="border border-slate-300">744</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">8</td>
+                        <td style="display: none" class="border border-slate-300">W_8</td>
+                        <td class="border border-slate-300">324</td>
+                        <td class="border border-slate-300">854</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">9</td>
+                        <td style="display: none" class="border border-slate-300">W_9</td>
+                        <td class="border border-slate-300">324</td>
+                        <td class="border border-slate-300">744</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">10</td>
+                        <td style="display: none" class="border border-slate-300">W_10</td>
+                        <td class="border border-slate-300">324</td>
+                        <td class="border border-slate-300">854</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_10_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">11</td>
+                        <td style="display: none" class="border border-slate-300">T_1</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">964</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">12</td>
+                        <td style="display: none" class="border border-slate-300">T_2</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">854</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">13</td>
+                        <td style="display: none" class="border border-slate-300">T_3</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">494</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">14</td>
+                        <td style="display: none" class="border border-slate-300">T_4</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">424</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">15</td>
+                        <td style="display: none" class="border border-slate-300">T_5</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">294</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">16</td>
+                        <td style="display: none" class="border border-slate-300">T_6</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">424</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">17</td>
+                        <td style="display: none" class="border border-slate-300">T_7</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">544</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">18</td>
+                        <td style="display: none" class="border border-slate-300">T_8</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">854</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">19</td>
+                        <td style="display: none" class="border border-slate-300">T_9</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">524</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">20</td>
+                        <td style="display: none" class="border border-slate-300">T_10</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">634</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_10_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">21</td>
+                        <td style="display: none" class="border border-slate-300">B_1</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">574</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">22</td>
+                        <td style="display: none" class="border border-slate-300">B_2</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">574</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">23</td>
+                        <td style="display: none" class="border border-slate-300">B_3</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">574</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">24</td>
+                        <td style="display: none" class="border border-slate-300">B_4</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">574</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">25</td>
+                        <td style="display: none" class="border border-slate-300">B_5</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">774</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">26</td>
+                        <td style="display: none" class="border border-slate-300">B_6</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">774</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">27</td>
+                        <td style="display: none" class="border border-slate-300">B_7</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">674</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">28</td>
+                        <td style="display: none" class="border border-slate-300">B_8</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">774</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">29</td>
+                        <td style="display: none" class="border border-slate-300">B_9</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">874</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">30</td>
+                        <td style="display: none" class="border border-slate-300">B_10</td>
+                        <td class="border border-slate-300">554</td>
+                        <td class="border border-slate-300">964</td>
+                        <td class="border border-slate-300">1</td>
+                        <th class="border border-slate-300">K</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_10_Side_1212121</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style=""
+            class="outputs-mian outputs  bg-slate-200 mx-auto max-w-3xl px-4  rounded-3xl items-center shadow-xl p-5 m-4">
+            <h3 class="text-2xl text-center text-cyan-800">Cladding - Shelf</h3>
+            <!-- <div class="table bg-slate-200"> -->
+            <table
+                class="table-cladding-sh table-auto hover:bg-gray-100 m-4 items-center ontainer mx-auto md:container md:mx-auto px-4  ">
+                <tbody>
+                    <tr class="table-header-grpup text-center uppercase bg-gray-300 ">
+                        <th style="display: none" class="border border-slate-300 p-2">ID</th>
+                        <th style="display: none" class="border border-slate-300 p-2">Name</th>
+                        <th class="border border-slate-300 p-2">Height</th>
+                        <th class="border border-slate-300 p-2">Width</th>
+                        <th class="border border-slate-300 p-2">QNT</th>
+                        <th class="border border-slate-300 p-2">Type</th>
+                        <th class="border border-slate-300 p-2">F</th>
+                        <th class="border border-slate-300 p-2">Label</th>
+                    </tr>
+                </tbody>
+                <tbody id="table-cladding-sh">
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">1</td>
+                        <td style="display: none" class="border border-slate-300">W_1</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">48</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">2</td>
+                        <td style="display: none" class="border border-slate-300">W_2</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">58</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">3</td>
+                        <td style="display: none" class="border border-slate-300">W_3</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">158</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">4</td>
+                        <td style="display: none" class="border border-slate-300">W_4</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">268</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">5</td>
+                        <td style="display: none" class="border border-slate-300">W_5</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">268</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">6</td>
+                        <td style="display: none" class="border border-slate-300">W_6</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">378</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">7</td>
+                        <td style="display: none" class="border border-slate-300">W_7</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">708</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">8</td>
+                        <td style="display: none" class="border border-slate-300">W_8</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">818</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">9</td>
+                        <td style="display: none" class="border border-slate-300">W_9</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">708</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">10</td>
+                        <td style="display: none" class="border border-slate-300">W_10</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">818</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">W_10_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">11</td>
+                        <td style="display: none" class="border border-slate-300">T_1</td>
+                        <td class="border border-slate-300">2063</td>
+                        <td class="border border-slate-300">928</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">12</td>
+                        <td style="display: none" class="border border-slate-300">T_2</td>
+                        <td class="border border-slate-300">2063</td>
+                        <td class="border border-slate-300">818</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">13</td>
+                        <td style="display: none" class="border border-slate-300">T_3</td>
+                        <td class="border border-slate-300">2063</td>
+                        <td class="border border-slate-300">458</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">14</td>
+                        <td style="display: none" class="border border-slate-300">T_4</td>
+                        <td class="border border-slate-300">2063</td>
+                        <td class="border border-slate-300">388</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">15</td>
+                        <td style="display: none" class="border border-slate-300">T_5</td>
+                        <td class="border border-slate-300">2063</td>
+                        <td class="border border-slate-300">258</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">16</td>
+                        <td style="display: none" class="border border-slate-300">T_6</td>
+                        <td class="border border-slate-300">2063</td>
+                        <td class="border border-slate-300">388</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">17</td>
+                        <td style="display: none" class="border border-slate-300">T_7</td>
+                        <td class="border border-slate-300">2063</td>
+                        <td class="border border-slate-300">508</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">18</td>
+                        <td style="display: none" class="border border-slate-300">T_8</td>
+                        <td class="border border-slate-300">2063</td>
+                        <td class="border border-slate-300">818</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">19</td>
+                        <td style="display: none" class="border border-slate-300">T_9</td>
+                        <td class="border border-slate-300">2063</td>
+                        <td class="border border-slate-300">488</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">20</td>
+                        <td style="display: none" class="border border-slate-300">T_10</td>
+                        <td class="border border-slate-300">2063</td>
+                        <td class="border border-slate-300">598</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">T_10_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">21</td>
+                        <td style="display: none" class="border border-slate-300">B_1</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">538</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_1_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">22</td>
+                        <td style="display: none" class="border border-slate-300">B_2</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">538</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_2_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">23</td>
+                        <td style="display: none" class="border border-slate-300">B_3</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">538</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_3_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">24</td>
+                        <td style="display: none" class="border border-slate-300">B_4</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">538</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_4_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">25</td>
+                        <td style="display: none" class="border border-slate-300">B_5</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">738</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_5_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">26</td>
+                        <td style="display: none" class="border border-slate-300">B_6</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">738</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_6_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">27</td>
+                        <td style="display: none" class="border border-slate-300">B_7</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">638</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_7_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">28</td>
+                        <td style="display: none" class="border border-slate-300">B_8</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">738</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_8_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">29</td>
+                        <td style="display: none" class="border border-slate-300">B_9</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">838</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_9_Side_1212121</td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td style="display: none" class="border border-slate-300">30</td>
+                        <td style="display: none" class="border border-slate-300">B_10</td>
+                        <td class="border border-slate-300">693</td>
+                        <td class="border border-slate-300">928</td>
+                        <td class="border border-slate-300">2</td>
+                        <th class="border border-slate-300">R</th>
+                        <th class="border border-slate-300"></th>
+                        <td class="border border-slate-300">B_10_Side_1212121</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- End Outputs -->
+        <div style="" class="new-data  bg-zinc-600 mx-auto max-w-3xl px-4 rounded-3xl items-center ">
+            <button name="newData" id="newData" class="text-2xl p-4 w-full text-center text-zinc-50" type="submit">New
+                Data </button>
+            <!-- <h3 id="new-data" class="text-2xl p-4 mb-4 text-center text-zinc-50">New Data</h3> -->
+        </div>
+        <!-- hitwebcounter Code START -->
+        <div class="counter d-none" style="display:none">
+            <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=8004973&amp;style=0006&amp;nbdigits=5&amp;type=page&amp;initCount=0"
+                    title="Free Counter" alt="web counter" border="0"></a>
+        </div>
+        <!-- <script src="script.js"></script> -->
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    </body>
+    <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
