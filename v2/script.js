@@ -164,6 +164,7 @@ newDataBtn.addEventListener("click",function () {
 	hide("tab-update");
 	hide("tab-newData");
 	show("tab-input");
+	head.innerHTML = "Cabinets Calculater";
 	contractNo.classList.remove("disabled");
 });
 
