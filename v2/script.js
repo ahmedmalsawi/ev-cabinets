@@ -434,11 +434,11 @@ show("tab-input");
 
 // change header by adding contract number
 let head = document.getElementById('head');
-contractNo.addEventListener('change',function(){
+contractNo.addEventListener('keyup',function(){
 	if(contractNo.value > 0){
-		head.innerHTML ="Cabinets Calculater";
-	}else{
 		head.innerHTML = contractNo.value + " - Cabinets Calculater";
+	}else{
+		head.innerHTML ="Cabinets Calculater";
 	}
 
 })
