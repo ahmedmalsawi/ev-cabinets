@@ -12,7 +12,6 @@
 	hide("top-tab-acpB");
 	hide("top-tab-acpS");
 
-
 //Setting Variables
 let contractNo  = document.getElementById("contractNo"),
 	wallQn      = document.getElementById("wallQn"),
@@ -105,11 +104,10 @@ submit.onclick = function () {
 	show("tab-update");
 	show("tab-newData");
 	
-	
 	spreadData();
 	contractNo.classList.add("disabled");
 	};
-	
+
 // spread data
 function spreadData(){
 	let cabinets = contracts[0].cabinets;
@@ -131,37 +129,20 @@ function spreadData(){
 	document.getElementById("updateTable").innerHTML = updateTable;
 }
 
-
-
 // get update values
 update.onclick = function (){ 
 	updateCell();
-	// autoHide("inputs-mian", "none");
-	// autoHide("update-mian", "none");
-	// autoHide("outputs-mian", "");
-	
-	// tabView("tab-update", "remove", "active");
-	// tabView("tab-input", "remove", "active");
-	// tabView("tab-acpSide", "add", "active");
-	// tabView("tab-input", "add", "hide");
-	// tabView("tab-update", "add", "hide");
-	// tabView("tab-acpSide", "remove", "hide");
-	// tabView("tab-acpTaB", "remove", "hide");
-	// tabView("tab-acpB", "remove", "hide");
-	// tabView("tab-acpS", "remove", "hide");
-	// tabView("tab-newData", "remove", "hide");
-		show("tab-acpSide");
-		show("top-tab-acpSide");
-		
-		show("top-tab-acpTaB");
-		show("top-tab-acpB");
-		show("top-tab-acpS");
 
-		hide("tab-input");
-		hide("tab-update");
-		show("tab-newData");
+	show("tab-acpSide");
+	show("top-tab-acpSide");
 	
-	
+	show("top-tab-acpTaB");
+	show("top-tab-acpB");
+	show("top-tab-acpS");
+
+	hide("tab-input");
+	hide("tab-update");
+	show("tab-newData");
 	
 	spreadCladding();
 	spreadCladdingTB();
@@ -386,23 +367,6 @@ function clearData(){
 	baseQn.value        = '';    
 }
 
-// // auto hide by class name
-// function autoHide(className,effect){
-// 	let fileds = document.getElementsByClassName(className);
-// 	for (let i = 0; i < fileds.length; i++) {
-// 		fileds[i].style.display = effect;
-// 	}
-// }
-// // auto hide by class name
-// function autoHide2(className,effect,e="remove"){
-// 	let fileds = document.getElementsByClassName(className);
-	
-// 	if(e === "add"){	
-// 		fileds.classList.add(effect);
-// 	}else{
-// 		fileds.classList.remove(effect);
-// 		}
-// };
 function hide(className) {
 	let divs = document.getElementsByClassName(className);
 	for (let i = 0; i < divs.length; i++) {
@@ -417,20 +381,6 @@ function show(className) {
 };
 hide("tab-input");
 show("tab-input");
-
-
-
-// auto hide by class name
-// function tabView(tabId,tabAction,tabClass){
-// 	let fileds = document.getElementsByClassName(tabId);
-// 		for (let i = 0; i < fileds.length; i++) {
-// 			if(tabAction === "add"){	
-// 				fileds.classList.add(tabClass);
-// 			}else{
-// 				fileds.classList.remove(tabClass);
-// 			}
-// 	}
-// }
 
 // change header by adding contract number
 let head = document.getElementById('head');
