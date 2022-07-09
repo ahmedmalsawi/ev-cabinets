@@ -1,0 +1,209 @@
+<div class="container new-data">
+    <table class="table-update table table-light text-center">
+        <thead class="table-dark text-center">
+            <tr class="text-center">
+                <th scope="col">Qnt</th>
+                <th scope="col">Width</th>
+                <th scope="col">Height</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="سفلي" id="shelf-1-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"  id="shelf-1-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"  id="shelf-1-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-1-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="علوي دور أول" id="shelf-2-width">
+                </td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-2-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-2-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-2-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="مفتوح " id="shelf-3-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-3-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-3-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-3-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td colspan="2" class=""><input disabled type="number" class="form-control text-center" value="براويز"
+                        id="shelf-4-width"></td>
+                <td class=""><input type="number" disabled class="form-control text-center" onkeyup="getTotals();"
+                        value="380" id="shelf-4-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" onkeyup="getTotals();"
+                        value="0" id="shelf-4-total"></td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="أدراج كبيرة" id="shelf-5-width">
+                </td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-5-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-5-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-5-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="أدراج وسط" id="shelf-6-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-6-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-6-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-6-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="أدراج صغيرة" id="shelf-7-width">
+                </td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-7-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-7-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-7-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="كورنيشة" id="shelf-8-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-8-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-8-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-8-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="زيادة رخام" id="shelf-9-width">
+                </td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-9-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-9-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-9-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="زيادة الطويل " id="shelf-10-width">
+                </td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-10-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-10-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-10-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="صوانى سحاب " id="shelf-11-width">
+                </td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-11-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-11-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-11-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="تقسيم " id="shelf-12-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-12-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-12-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-12-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="ترولى " id="shelf-13-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-13-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-13-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-13-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="منظفات " id="shelf-14-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-14-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-14-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-14-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="زجاج + جورجيان"
+                        id="shelf-15-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-15-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-15-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-15-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="مانع مياه " id="shelf-16-width">
+                </td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-16-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-16-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-16-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="مجلى " id="shelf-17-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-17-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-17-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-17-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="" id="shelf-18-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-18-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-18-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-18-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="" id="shelf-19-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-19-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-19-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-19-total">
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td class=""><input type="number" class="form-control text-center" value="" id="shelf-20-width"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-20-qnt"></td>
+                <td class=""><input type="number" class="form-control text-center" onkeyup="getTotals();" value="0"
+                        id="shelf-20-height"></td>
+                <td class=""><input disabled type="number" class="form-control text-center" value="0" id="shelf-20-total">
+                </td>
+            </tr>
+        </tbody>
+        <tfoot class="text-center">
+            <tr class="text-center">
+                <td colspan="2" class=""><input disabled type="text" class="form-control text-center"
+                        value="المجموع"></td>
+                <td colspan="2" class=""><input disabled type="number" class="form-control text-center" value="0"
+                        id="shelf-foot-total"></td>
+            </tr>
+            
+        </tfoot>
+    </table>
+
+</div>
