@@ -66,3 +66,27 @@ color:#BD2939;
 .image{
 max-width: 400px;
 }
+
+@media print {
+          html, body {
+          align-items: center;
+            /* margin: 0; */
+            padding: 0;
+            background: #FFF; 
+            font-size: 10pt;
+          }
+          .container, .container div {
+          align-items: center;
+            width: 100%;
+            /* margin: 0; */
+            padding: 0;
+          }
+          .template { overflow: hidden; }
+          img { width: 100%; }
+          .no-print{
+          display:none;
+          }
+          .table>:not(caption)>*>* {
+            padding: 0;
+          }
+        }
