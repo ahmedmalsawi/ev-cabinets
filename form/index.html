@@ -46,9 +46,10 @@
         <div class="nav-tabs no-print">
             <ul class="nav nav-tabs text-center align-items-lg-center">
                 <li id="tab-general"      class="nav-item tab-input  no-print " ><a class="nav-link "   href="#">البيانات الأساسية</a></li>
-                <li id="tab-kitchen"     class="nav-item tab-update  no-print" ><a class="nav-link " href="#">مطبخ</a></li>
-                <li id="tab-devices"     class="nav-item tab-update  no-print" ><a class="nav-link " href="#">اجهزة</a></li>
-                <li id="tab-accessories"     class="nav-item tab-update  no-print" ><a class="nav-link " href="#">اكسسوارات</a></li>
+                <li id="tab-kitchen"     class="nav-item tab-update  no-print hide" ><a class="nav-link " href="#">مطبخ</a></li>
+                <li id="tab-devices"     class="nav-item tab-update  no-print hide" ><a class="nav-link " href="#">اجهزة</a></li>
+                <li id="tab-accessories"     class="nav-item tab-update  no-print hide" ><a class="nav-link " href="#">اكسسوارات</a></li>
+                <li id="tab-addons"     class="nav-item tab-update  no-print hide" ><a class="nav-link " href="#">اضافات</a></li>
             </ul>
           </div>
           <!-- =================================================================================================================================================================== -->
@@ -96,6 +97,31 @@
           <input type="number" id="input_4" name="q4_phoneNumber" data-type="input-textbox" class="form-control"   data-defaultvalue=""  value="" data-component="textbox" aria-labelledby="label_4" placeholder=" " step="5"/>
         </div>
       </div>
+      <!-- Row End -->
+      <!-- Row Start -->
+      <div class="row g-2 m-2">
+      <div class="container">
+        <div class="col-md col-sm ">
+          <label class="btn" >نوع العقد</label>
+        </div>
+        <div class="col-md col-sm form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" cat="kitchen">
+          <label class="form-check-label" for="inlineCheckbox1">مطبخ</label><br>
+        </div>
+        <div class="col-md col-sm form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1"cat="devices">
+          <label class="form-check-label" for="inlineCheckbox2">اجهزة</label><br>
+        </div>
+        <div class="col-md col-sm form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1" cat="accessories">
+          <label class="form-check-label" for="inlineCheckbox3">اكسسوارات</label><br>
+        </div>
+        <div class="col-md col-sm form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option1" cat="addons">
+          <label class="form-check-label" for="inlineCheckbox4">اضافات</label><br>
+        </div>
+      </div>
+    </div>
       <!-- Row End -->
     </div>
   </div>
