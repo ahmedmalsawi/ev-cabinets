@@ -519,9 +519,10 @@ var tafkeetResult = document.getElementById("result");
 
 function getPrice() {
 	tafkeetTax.value = Math.round((tafkeetInput.value * 0.15) * 100) / 100;
+	tafkeetTotal.value = Math.round(tafkeetInput.value * 1.15 * 100) / 100;
 
 
-	var fraction = document.getElementById("input_6").value.split(".");
+	var fraction = document.getElementById("inputTotal").value.split(".");
 
 	if (fraction.length == 2) {
 		document.getElementById("result").value = tafqeet(fraction[0]) + " ريال  و " + tafqeet(fraction[1]);
