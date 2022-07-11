@@ -69,6 +69,12 @@ color:#BD2939;
 .image {
   max-width: 400px;
 }
+.print-logo{
+width: 20%;
+right:0;
+top:0;
+position: relative;
+}
 
 @media print {
 

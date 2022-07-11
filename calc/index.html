@@ -38,19 +38,19 @@
                         </div>
                         <div class="col-md col-sm col">
                             <div class="form-floating">
-                                <input type="text" class="form-control " id="customer" value="" placeholder="Ex: 12234">
+                                <input type="text" class="form-control " id="customer" value="" placeholder="Ex: 12234" autocomplete>
                                 <label for="customer">اسم العميل</label>
                             </div>
                         </div>
                         <div class="col-md col-sm col">
                             <div class="form-floating">
-                                <input type="text" class="form-control " id="salesman" value="" placeholder="Ex: 12234">
+                                <input type="text" class="form-control " id="salesman" value="" placeholder="Ex: 12234" autocomplete>
                                 <label for="salesman">اسم المندوب</label>
                             </div>
                         </div>
                         <div class="col-md col-sm col">
                             <div class="form-floating input-group date">
-                                <input type="date" class="form-control " id="date" value="" placeholder="dd-mm-yyyy" pattern="\d{4}-\d{2}-\d{2}">
+                                <input type="date" class="form-control " id="date" value="" placeholder="dd-mm-yyyy" pattern="\d{4}-\d{2}-\d{2}" autocomplete>
                                 <label for="date">التاريخ(M-D-Y)</label>
                             </div>
                         </div>
@@ -70,6 +70,7 @@
                 <!-- <li id="tab-newData"    class="nav-item tab-newData " ><a class="nav-link " href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li> -->
                 <li id="tab-data"      class="nav-item tab-input  no-print " ><a class="nav-link "   href="#">بيانات العقد</a></li>
                 <li id="tab-brwaz"     class="nav-item tab-update  no-print" ><a class="nav-link " href="#">البراويز</a></li>
+                <li id="tab-print"     class="nav-item tab-print  no-print" ><button class="nav-link " href="#" onkeyup="data.classList.remove('hide');" onclick="window.print();return false;"  value="Print"><img class=" print-logo img-thumbnail" src="./images/print3.png" alt=""></button></li>
             </ul>
         </div>
         
