@@ -1,0 +1,373 @@
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com"
+    crossorigin><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+    integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    
+    
+    <title>Ev-Page-Calculate</title>
+</head>
+
+<body>
+
+    <div class="container-xxl all-site">
+        <div class="container-xxl header text-center w-50 pb-0 mb-0 m-0 rounded-5 mx-auto">
+            <h3 class="fs-5 text-red-600">فنون حواء للمطابخ</h3>
+            <p id="head" class="head fs-7 w-100 text-center font-bold"> حاسبة الخزائن</p>
+        </div>
+    </div>
+  <div
+        class="all-site container-xxl mt-0 p-2 border-spacing-2 border border-danger  rounded bg-blue bg-dark bg-opacity-10">
+        <div
+            class="all-site container-xxl mainData border-black border-spacing-2 border border-success border-start-0 rounded-end bg-success bg-opacity-10">
+            <div class="container mainData-01 row m-2 ">
+                <div class="customerName col-8 form-floating ">
+                    <input type="text" class="form-control" id="customerName" value=""
+                        placeholder="Ex: محمود ابراهيم عبد الباقي" autocomplete >
+                    <label for="customerName">اسم العميل</label>
+                </div>
+                <div class="customerPhone col-md col-sm col form-floating placeholder:text-center">
+                    <input type="customerPhone" class="form-control" id="customerPhone" value=""
+                        placeholder="Ex: 9668001111414" autocomplete >
+                    <label for="customerPhone">رقم الجوال</label>
+                </div>
+
+
+            </div>
+            <div class="container mainData-02 row m-2">
+
+                <div class="salesman col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control " id="salesman" value="" placeholder="Ex: عصام سلامة" autocomplete>
+                    <label for="salesman">المصمم</label>
+                </div>
+                <div class="showroom col-md col-sm col form-floating placeholder:text-center">
+                    <select class="form-select" id="showroom" aria-label="Floating label select example">
+                        <option selected>يرجي اختيار المعرض</option>
+                        <option value="0- المصنع">0- المصنع</option>
+                        <option value="1- التخصصي">1- التخصصي</option>
+                        <option value="2- الإمام سعود">2- الإمام سعود</option>
+                        <option value="3- بريدة">3- بريدة</option>
+                        <option value="4- الخبر">4- الخبر</option>
+                        <option value="5- السيف جاليري">5- السيف جاليري</option>
+                        <option value="6- الدوادمي">6- الدوادمي</option>
+                        <option value="7- الرس">7- الرس</option>
+                        <option value="8- الأحساء">8- الأحساء</option>
+                        <option value="9- المجمعة">9- المجمعة</option>
+                        <option value="10- الدمام">10- الدمام</option>
+                        <option value="11- المدينة">11- المدينة</option>
+                        <option value="12- جدة">12- جدة</option>
+                    </select>
+                    <label for="showroom">المعرض</label>
+                </div>
+                
+            </div>
+            <div class="container mainData-03 row m-2">
+                
+                <div class="cabType col-6 form-floating placeholder:text-center">
+                    <select class="form-select" id="cabType" aria-label="Floating label select example" onchange="cabType();" onkeyup="cabType();">
+                        <option selected disabled class="text-bg-dark text-danger">اختر نوع الخزانة</option>
+                        <option onclick="cabType();" value="خزنة مفتوحة بدون أبواب"> مفتوحة بدون أبواب-945</option>
+                        <option value="خزنة باب سحب خشب"> باب سحب خشب-1240</option>
+                        <option value="خزنة باب سحب زجاج"> باب سحب زجاج-1670</option>
+                        <option value="خزنة مفصلية باب خشب"> مفصلية باب خشب-1370</option>
+                        <option value="خزنة مفصلية باب زجاج"> مفصلية باب زجاج-1950</option>
+                    </select>
+                    <label for="cabType">نوع الخزانة</label>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="width col-1 form-floating placeholder:text-center">
+                    <input type="number" class="form-control " id="width" value="" onkeyup="meter();"
+                        placeholder="Ex:" >
+                    <label for="width">عرض</label>
+                </div>
+                <div class="height col-1 form-floating placeholder:text-center">
+                    <input type="number" class="form-control " id="height" value="" onkeyup="meter();"
+                        placeholder="Ex: " >
+                    <label for="height">ارتفاع</label>
+                </div>
+                <div class="sMeter col-md col-sm col form-floating placeholder:text-center">
+                    <input type="number" class="form-control " id="sMeter" value="" placeholder="Ex: "
+                        disabled>
+                    <label for="sMeter">المتر المربع</label>
+                </div>
+            </div>
+            <div class="container mainData-03 row m-2">
+                <div class="meterPrice col-md col-sm col form-floating placeholder:text-center">
+                    <input type="number" class="form-control " id="meterPrice" value="" placeholder="Ex: "
+                        disabled>
+                    <label for="meterPrice">سعر المتر</label>
+                </div>
+                <div class="totalNoTax col-md col-sm col form-floating placeholder:text-center">
+                    <input type="number" class="form-control " id="totalNoTax" value="" placeholder="Ex: "
+                        disabled>
+                    <label for="totalNoTax">القيمة (قبل الضريبة) </label>
+                </div>
+                <div class="totalTaxed col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control totalTaxedInput" id="totalTaxed" value="" placeholder="Ex: "
+                        disabled>
+                    <label for="totalTaxed"> القيمة (شاملة الضريبة) </label>
+                </div>
+            </div>
+        </div>
+<div class="hide">
+        <div class="all-site container-lg cabinet  border-spacing-2 border border-danger border-start-0 rounded-end bg-danger bg-opacity-10 mt-2 mb-2">
+            <div class="container cabinet-01 row m-2 ">
+                <div class="cabinetType col-md col-sm col form-floating ">
+                    <input type="text" class="form-control float-right" id="cabinetType" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="cabinetType" class="float-right">نوع الكابينة </label>
+                </div>
+                <div class="handelCode col-md col-sm col form-floating  placeholder:text-center">
+                    <input type="text" class="form-control float-right" id="handelCode" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="handelCode">نوع / كود المسكة</label>
+                </div>
+                <div class="handelCount col-md col-sm col form-floating placeholder:text-center">
+                    <input type="number" class="form-control" id="handelCount" value=""
+                        placeholder="Ex: 20" autocomplete >
+                    <label for="handelCount">عدد المسكات </label>
+                </div>
+            </div>
+            <div class="container cabinet-02 row m-2">
+                <div class="doorType col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control " id="doorType" value="" placeholder="Ex: "
+                        autocomplete>
+                    <label for="doorType">نوع الدرفة </label>
+                </div>
+                <div class="doorCode col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control " id="doorCode" value=""
+                        placeholder="Ex: " autocomplete>
+                    <label for="doorCode">موديل الدرفة</label>
+                </div>
+                <div class="door-color col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control " id="door-color" value=""
+                        placeholder="Ex: " autocomplete>
+                    <label for="door-color">كود لون الدرفة</label>
+                </div>
+            </div>
+            <div class="container cabinet-03 row m-2">
+                <div class="cabinetAdd col-md col-sm col form-floating placeholder:text-center">
+                    <textarea class="form-control " id="cabinetAdd" value="" placeholder="Ex: 90"
+                        autocomplete></textarea>
+                    <label for="cabinetAdd">معلومات اضافية عن الكابينة والدرفة </label>
+                </div>
+              </div>
+        </div>
+
+         <div class="all-site container-lg cabinetAddon  border-spacing-2 border border-danger border-start-0 rounded-end bg-danger bg-opacity-10 mt-2 mb-2">
+            <div class="container mainData-01 row m-2 ">
+                <div class="shelf01 col-md col-sm col form-floating ">
+                    <input type="text" class="form-control" id="shelf01" value=""
+                        placeholder="Ex:    " autocomplete >
+                    <label for="shelf01">أرفف إضافية </label>
+                </div>
+                <div class="nala col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="nala" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="nala">نعلة رخام / خشب </label>
+                </div>
+                <div class="nalaPaint col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="nalaPaint" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="nalaPaint">طلاء النعلة </label>
+                </div>
+            </div>
+              <div class="container cabinet-03 row m-2">
+                <div class="doorAddName  col-3 form-floating placeholder:text-center">
+                    <input type="text" class="form-control " id="doorAddName" value="" placeholder="Ex: "
+                        autocomplete>
+                    <label for="doorAddName"> اضافة  اخري  </label>
+                </div>
+                <div class="doorAddValue col-md  col-sm-6 form-floating placeholder:text-center">
+                    <input type="text" class="form-control " id="doorAddValue" value="" placeholder="Ex: "
+                        autocomplete>
+                    <label for="doorAddValue"> البيان </label>
+              </div>
+            </div>
+        </div>
+
+         <div class="all-site container-lg cabinetAddon  border-spacing-2 border border-danger border-start-0 rounded-end bg-danger bg-opacity-10 mt-2 mb-2">
+            <div class="container mainData-01 row m-2 ">
+                <div class="georgianBar col-md col-sm col form-floating ">
+                    <input type="text" class="form-control" id="georgianBar" value=""
+                        placeholder="Ex:" autocomplete >
+                    <label for="georgianBar">جورجيان بار </label>
+                </div>
+                <div class="glass col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="glass" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="glass"> درف زجاج / أكريلك  </label>
+                </div>
+                <div class="doorOpen col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="doorOpen" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="doorOpen"> فتح الدرفة </label>
+                </div>
+            </div>
+              <div class="container cabinet-03 row m-2">
+                <div class="glassAddonName  col-3 form-floating placeholder:text-center">
+                    <input type="text" class="form-control " id="glassAddonName" value="" placeholder="Ex: "
+                        autocomplete>
+                    <label for="glassAddonName"> اضافة  اخري  </label>
+                </div>
+                <div class="glassAddonValue col-md  col-sm-6 form-floating placeholder:text-center">
+                    <input type="text" class="form-control " id="glassAddonValue" value="" placeholder="Ex: "
+                        autocomplete>
+                    <label for="glassAddonValue"> البيان </label>
+              </div>
+            </div>
+        </div>
+
+        <div class="all-site container-lg cabinetAddon  border-spacing-2 border border-danger border-start-0 rounded-end bg-danger bg-opacity-10 mt-2 mb-2">
+            <div class="container mainData-01 row m-2 ">
+                <div class="surfaceType col-md col-sm col form-floating ">
+                    <input type="text" class="form-control" id="surfaceType" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="surfaceType">نوع السطح  </label>
+                </div>
+                <div class="surfaceCode col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="surfaceCode" value=""
+                        placeholder="Ex: 9668001111414" autocomplete >
+                    <label for="surfaceCode">  كود السطح </label>
+                </div>
+                <div class="sinkType col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="sinkType" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="sinkType"> نوع المجلي  </label>
+                </div>
+            </div>
+            <div class="container cabinet-03 row m-2">
+                <div class="surfaceExtra col-md col-sm col form-floating placeholder:text-center">
+                    <textarea class="form-control " id="surfaceExtra" value="" placeholder="Ex: "
+                        autocomplete></textarea>
+                    <label for="surfaceExtra">معلومات اضافية عن السطح   </label>
+                </div>
+              </div>
+        </div>
+
+        <div class="all-site container-lg cabinetAddon  border-spacing-2 border border-danger border-start-0 rounded-end bg-danger bg-opacity-10 mt-2 mb-2">
+            <div class="container mainData-01 row m-2 ">
+                <div class="wallCover col-md col-sm col form-floating ">
+                    <input type="text" class="form-control" id="wallCover" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="wallCover"> تكسيات جدارية </label>
+                </div>
+                <div class="upperCor col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="upperCor" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="upperCor"> كورنيش علوي </label>
+                </div>
+                <div class="lowerCor col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="lowerCor" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="lowerCor"> كورنيش سفلي </label>
+                </div>
+            </div>
+            <div class="container mainData-01 row m-2 ">
+                <div class="shelfHanged col-md col-sm col form-floating ">
+                    <input type="text" class="form-control" id="shelfHanged" value=""
+                        placeholder="Ex:" autocomplete >
+                    <label for="shelfHanged"> أرفف معلقة </label>
+                </div>
+                <div class="light col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="light" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="light"> إنارة </label>
+                </div>
+                <div class="cabinetOpen col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="cabinetOpen" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="cabinetOpen"> كبائن مفتوحة </label>
+                </div>
+            </div>
+            <div class="container mainData-01 row m-2 ">
+                <div class="drawerSmall col-md col-sm col form-floating ">
+                    <input type="number" class="form-control" id="drawerSmall" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="drawerSmall"> درج هيدروليك صغير </label>
+                </div>
+                <div class="drawerMed col-md col-sm col form-floating placeholder:text-center">
+                    <input type="number" class="form-control" id="drawerMed" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="drawerMed">  درج هيدروليك وسط </label>
+                </div>
+                <div class="drawerLar col-md col-sm col form-floating placeholder:text-center">
+                    <input type="number" class="form-control" id="drawerLar" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="drawerLar"> درج هيدروليك كبير </label>
+                </div>
+            </div>
+            <div class="container mainData-01 row m-2 ">
+                <div class="general-add-01 col-md col-sm col form-floating ">
+                    <input type="text" class="form-control" id="general-add-01" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="general-add-01">إضافة أخري 1   </label>
+                </div>
+                <div class="general-add-02 col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="general-add-02" value=""
+                        placeholder="Ex: " autocomplete >
+                    <label for="general-add-02">  إضافة أخري 2  </label>
+                </div>
+                <div class="general-add-03 col-md col-sm col form-floating placeholder:text-center">
+                    <input type="text" class="form-control" id="general-add-03" value=""
+                        placeholder="Ex: test@test.test" autocomplete >
+                    <label for="general-add-03"> إضافة أخري 3   </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="all-site container-lg cabinetAddon  border-spacing-2 border border-danger border-start-0 rounded-end bg-danger bg-opacity-10 mt-2 mb-2">
+            <div class="container cabinet-03 row m-2">
+                <div class="factoryInstructions col-md col-sm col form-floating placeholder:text-center">
+                    <textarea class="form-control" id="factoryInstructions" value="" placeholder="Ex: "
+                    autocomplete></textarea>
+                    <label for="factoryInstructions">معلومات أخري للمصنع </label>
+                </div>
+              </div>
+        </div>
+
+        <div class="row ">
+          <div type="submit" class=" btn-succsess align-center text-center border-0 hover:text-red-600 " onclick="start();">ارسال الي مونداي</div>
+        </div>
+        </div>
+      <!-- </form> -->
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
